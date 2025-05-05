@@ -1,0 +1,11 @@
+<html lang="en">
+<head>
+    <title>My Web App</title>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

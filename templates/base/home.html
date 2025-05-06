@@ -1,4 +1,11 @@
 {% load static %}
+
+{% if warning %}
+<script>
+    alert("{{ warning }}");
+</script>
+{% endif %}
+
 <html lang="en">
 <head>
 

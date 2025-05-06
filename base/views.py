@@ -21,6 +21,12 @@ def result(request):
     if form.is_valid():
         data = form.cleaned_data
 
+        if data['age'] < 18:
+            return render(request, 'base/home.html', {
+                "form": form,
+                "warning": "Invalid data detected. You must be at least 18 years old to apply for insurance."
+            })
+
         engine = InsurancePricingEngine()
 
         engine.reset()

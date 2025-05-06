@@ -1,15 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={% static 'styles.css' %}>
+    <title>Insurance Cost Calculation Result</title>
 </head>
 <body>
-Result Page
-{% if result %}
-    <h1>Result: {{ result }}</h1>
-{% else %}
-    <h1>No result available</h1>
-{% endif %}
+    <form>
+        {% if result %}
+            <h1>Result: {{ result }}</h1>
+            <a href={{'/'}}>Back</a>
+        {% else %}
+            <h1>No result available</h1>
+            <a href={{'/'}}>Back</a>
+        {% endif %}
+    </form>
 </body>
 </html>

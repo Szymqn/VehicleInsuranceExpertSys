@@ -1,0 +1,44 @@
+*{
+    font-family: "JetBrains Mono", serif;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    border: 3px solid gray;
+    border-radius: 5px;
+  }
+
+  form p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  form label {
+    width: 40%;
+    text-align: left;
+    margin-right: 1rem;
+  }
+
+  form input,
+  form select {
+    width: 60%;
+    padding: 0.3rem;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+
+
+form{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.5rem;
+}

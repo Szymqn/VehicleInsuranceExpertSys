@@ -46,8 +46,8 @@ def result(request):
         ))
 
         engine.run()
-        premium = engine.get_price()
+        premium, info = engine.get_price()
 
-        return render(request, 'base/result.html', {"result": premium})
+        return render(request, 'base/result.html', {"result": premium, "info": info})
 
     return render(request, 'base/home.html', {"form": form})

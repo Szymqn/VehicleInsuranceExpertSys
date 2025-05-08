@@ -13,6 +13,10 @@
     <form>
         {% if result %}
             <h1>Result: {{ result }}</h1>
+            <h2>Calculation rules used:</h2>
+            {% for line in info %}
+                <p>{{ line }}</p>
+            {% endfor %}
             <a href={{'/'}}>Back</a>
         {% else %}
             <h1>No result available</h1>
